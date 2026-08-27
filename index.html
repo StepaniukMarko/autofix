@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFix Pro — Професійний автосервіс</title>
+    <meta name="description" content="AutoFix Pro — сучасний автосервіс. Діагностика, ремонт двигунів, ходової, електрики. Чесні ціни, гарантія на роботу.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🔧</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<header class="hdr" id="hdr">
+    <nav class="nav"><a href="#" class="logo">Auto<span>Fix</span> Pro</a><div class="nav-lnk"><a href="#services">Послуги</a><a href="#why">Переваги</a><a href="#pricing">Ціни</a><a href="#book">Запис</a></div><a href="#book" class="nav-btn">Записатися</a><button class="burger" id="burger" aria-label="Меню"><span></span><span></span></button></nav>
+</header>
+<div class="mob" id="mob"><a href="#services" onclick="closeM()">Послуги</a><a href="#why" onclick="closeM()">Переваги</a><a href="#pricing" onclick="closeM()">Ціни</a><a href="#book" onclick="closeM()">Запис</a></div>
+
+<section class="hero">
+    <div class="hero-content" data-reveal>
+        <span class="hero-tag">Автосервіс · Вінниця</span>
+        <h1>Ремонт, якому<br>довіряють</h1>
+        <p>Діагностика за 30 хвилин. Чесний кошторис до початку робіт. Гарантія на кожну послугу.</p>
+        <div class="hero-acts"><a href="#book" class="btn btn-main">Записатися на діагностику</a><a href="tel:+380441234567" class="btn btn-out">+38 (044) 123-45-67</a></div>
+        <div class="hero-trust"><span>✓ Без прихованих доплат</span><span>✓ Оригінальні запчастини</span><span>✓ Гарантія 12 міс</span></div>
+    </div>
+    <div class="hero-visual" data-reveal="delay">
+        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=900&q=85" alt="AutoFix Pro">
+    </div>
+</section>
+
+<section class="sec" id="services">
+    <div class="sec-hd" data-reveal><span class="tag">Послуги</span><h2>Що ми ремонтуємо</h2></div>
+    <div class="srvs" data-reveal>
+        <div class="srv"><h3>🔍 Діагностика</h3><p>Комп'ютерна діагностика всіх систем. Звіт з фото за 30 хвилин.</p><span class="srv-p">від 300 ₴</span></div>
+        <div class="srv"><h3>⚙️ Двигун</h3><p>Ремонт та обслуговування бензинових і дизельних двигунів.</p><span class="srv-p">від 2 000 ₴</span></div>
+        <div class="srv"><h3>🛞 Ходова</h3><p>Підвіска, амортизатори, рульове управління, розвал-сходження.</p><span class="srv-p">від 500 ₴</span></div>
+        <div class="srv"><h3>🔌 Електрика</h3><p>Діагностика та ремонт електрообладнання, генератор, стартер.</p><span class="srv-p">від 400 ₴</span></div>
+        <div class="srv"><h3>❄️ Кондиціонер</h3><p>Заправка, діагностика витоків, ремонт компресора.</p><span class="srv-p">від 600 ₴</span></div>
+        <div class="srv"><h3>🛢️ ТО</h3><p>Планове обслуговування: заміна масла, фільтрів, свічок, рідин.</p><span class="srv-p">від 800 ₴</span></div>
+    </div>
+</section>
+
+<section class="sec sec-alt" id="why">
+    <div class="sec-hd" data-reveal><span class="tag">Переваги</span><h2>Чому обирають нас</h2></div>
+    <div class="why-grid" data-reveal>
+        <div class="why"><strong>8+</strong><span>років досвіду</span></div>
+        <div class="why"><strong>5000+</strong><span>відремонтованих авто</span></div>
+        <div class="why"><strong>12 міс</strong><span>гарантія на роботу</span></div>
+        <div class="why"><strong>30 хв</strong><span>безкоштовна діагностика</span></div>
+    </div>
+</section>
+
+<section class="sec" id="pricing">
+    <div class="sec-hd" data-reveal><span class="tag">Ціни</span><h2>Прозоре ціноутворення</h2><p class="sec-sub">Кошторис до початку робіт. Без сюрпризів.</p></div>
+    <div class="price-table" data-reveal>
+        <div class="pt-row pt-hd"><span>Послуга</span><span>Ціна від</span></div>
+        <div class="pt-row"><span>Комп'ютерна діагностика</span><span>300 ₴</span></div>
+        <div class="pt-row"><span>Заміна масла + фільтр</span><span>800 ₴</span></div>
+        <div class="pt-row"><span>Заміна гальмівних колодок</span><span>600 ₴</span></div>
+        <div class="pt-row"><span>Ремонт підвіски (1 вісь)</span><span>1 500 ₴</span></div>
+        <div class="pt-row"><span>Розвал-сходження</span><span>500 ₴</span></div>
+        <div class="pt-row"><span>Заправка кондиціонера</span><span>600 ₴</span></div>
+        <div class="pt-row"><span>Ремонт двигуна</span><span>від 2 000 ₴</span></div>
+    </div>
+</section>
+
+<section class="sec sec-dark" id="book">
+    <div class="sec-hd" data-reveal><span class="tag tag--l">Запис</span><h2 class="t-l">Записатися на сервіс</h2></div>
+    <div class="book-grid" data-reveal>
+        <form class="b-form" id="b-form">
+            <input type="text" placeholder="Ваше ім'я" required>
+            <input type="tel" placeholder="+380 __ ___ __ __" required>
+            <input type="text" placeholder="Марка та модель авто">
+            <select><option disabled selected>Тип послуги</option><option>Діагностика</option><option>Двигун</option><option>Ходова</option><option>Електрика</option><option>Кондиціонер</option><option>ТО</option></select>
+            <button type="submit" class="btn btn-main btn-full">Записатися</button>
+        </form>
+        <div class="b-info">
+            <div class="bi"><span class="bl">Адреса</span><span>вул. Немирівське шосе, 45</span></div>
+            <div class="bi"><span class="bl">Телефон</span><a href="tel:+380441234567">+38 (044) 123-45-67</a></div>
+            <div class="bi"><span class="bl">Графік</span><span>Пн–Сб: 8:00 – 19:00</span></div>
+        </div>
+    </div>
+</section>
+
+<footer class="ftr"><div class="ftr-in"><a href="#" class="logo">Auto<span>Fix</span> Pro</a><p>© 2026 AutoFix Pro. Демо.</p><p class="fc"><a href="https://t.me/MarkoStepaniuk">MarkLabs Agency</a></p></div></footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+window.addEventListener('scroll',function(){document.getElementById('hdr').classList.toggle('scrolled',scrollY>50);});
+var burger=document.getElementById('burger'),mob=document.getElementById('mob');
+burger.onclick=function(){burger.classList.toggle('on');mob.classList.toggle('on');document.body.style.overflow=mob.classList.contains('on')?'hidden':'';};
+function closeM(){burger.classList.remove('on');mob.classList.remove('on');document.body.style.overflow='';}
+var obs=new IntersectionObserver(function(e){e.forEach(function(el){if(el.isIntersecting)el.target.classList.add('vis');});},{threshold:0.1});
+document.querySelectorAll('[data-reveal]').forEach(function(el){obs.observe(el);});
+document.getElementById('b-form').onsubmit=function(e){e.preventDefault();this.querySelector('button').textContent='✓ Записано!';this.querySelector('button').disabled=true;};
+</script>
+</body>
+</html>
