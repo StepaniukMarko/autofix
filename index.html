@@ -2,98 +2,481 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoFix Pro — Професійний автосервіс</title>
-    <meta name="description" content="AutoFix Pro — сучасний автосервіс. Діагностика, ремонт двигунів, ходової, електрики. Чесні ціни, гарантія на роботу.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>AutoFix Pro — Problem Solved</title>
+    <meta name="description" content="AutoFix Pro — дізнайтесь проблему вашого авто ще до дзвінка. Smart Diagnosis, прозорі ціни, гарантія результату.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🔧</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-<header class="hdr" id="hdr">
-    <nav class="nav"><a href="#" class="logo">Auto<span>Fix</span> Pro</a><div class="nav-lnk"><a href="#services">Послуги</a><a href="#why">Переваги</a><a href="#pricing">Ціни</a><a href="#book">Запис</a></div><a href="#book" class="nav-btn">Записатися</a><button class="burger" id="burger" aria-label="Меню"><span></span><span></span></button></nav>
+
+<header class="header" id="header">
+    <nav class="nav">
+        <a href="#" class="nav__logo">AUTO<span>FIX</span> PRO</a>
+        <div class="nav__links">
+            <a href="#diagnosis">Діагностика</a>
+            <a href="#estimator">Вартість</a>
+            <a href="#process">Процес</a>
+            <a href="#trust">Довіра</a>
+            <a href="#booking">Запис</a>
+        </div>
+        <a href="#diagnosis" class="nav__cta">Перевірити авто</a>
+        <button class="nav__burger" id="burger" aria-label="Menu">
+            <span></span><span></span>
+        </button>
+    </nav>
 </header>
-<div class="mob" id="mob"><a href="#services" onclick="closeM()">Послуги</a><a href="#why" onclick="closeM()">Переваги</a><a href="#pricing" onclick="closeM()">Ціни</a><a href="#book" onclick="closeM()">Запис</a></div>
 
+<div class="mobile-menu" id="mobile-menu">
+    <a href="#diagnosis" onclick="closeMenu()">Smart Diagnosis</a>
+    <a href="#estimator" onclick="closeMenu()">Вартість</a>
+    <a href="#process" onclick="closeMenu()">Процес</a>
+    <a href="#trust" onclick="closeMenu()">Довіра</a>
+    <a href="#booking" onclick="closeMenu()">Записатися</a>
+</div>
+
+<!-- ===== HERO ===== -->
 <section class="hero">
-    <div class="hero-content" data-reveal>
-        <span class="hero-tag">Автосервіс · Вінниця</span>
-        <h1>Ремонт, якому<br>довіряють</h1>
-        <p>Діагностика за 30 хвилин. Чесний кошторис до початку робіт. Гарантія на кожну послугу.</p>
-        <div class="hero-acts"><a href="#book" class="btn btn-main">Записатися на діагностику</a><a href="tel:+380441234567" class="btn btn-out">+38 (044) 123-45-67</a></div>
-        <div class="hero-trust"><span>✓ Без прихованих доплат</span><span>✓ Оригінальні запчастини</span><span>✓ Гарантія 12 міс</span></div>
+    <div class="hero__bg">
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&q=85" alt="Car diagnostics" class="hero__bg-img">
+        <div class="hero__overlay"></div>
     </div>
-    <div class="hero-visual" data-reveal="delay">
-        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=900&q=85" alt="AutoFix Pro">
+    <div class="hero__content" data-reveal>
+        <div class="hero__badge">
+            <span class="hero__badge-pulse"></span>
+            97% клієнтів повертаються
+        </div>
+        <h1 class="hero__title">Дізнайся<br>проблему<br><span class="hero__accent">зараз</span></h1>
+        <p class="hero__desc">Smart Diagnosis визначить ймовірну причину поломки ще до вашого візиту. Безкоштовно. За 30 секунд.</p>
+        <a href="#diagnosis" class="btn btn--accent btn--lg">Запустити діагностику</a>
     </div>
+    <div class="hero__scroll"><div class="hero__scroll-line"></div></div>
 </section>
 
-<section class="sec" id="services">
-    <div class="sec-hd" data-reveal><span class="tag">Послуги</span><h2>Що ми ремонтуємо</h2></div>
-    <div class="srvs" data-reveal>
-        <div class="srv"><h3>🔍 Діагностика</h3><p>Комп'ютерна діагностика всіх систем. Звіт з фото за 30 хвилин.</p><span class="srv-p">від 300 ₴</span></div>
-        <div class="srv"><h3>⚙️ Двигун</h3><p>Ремонт та обслуговування бензинових і дизельних двигунів.</p><span class="srv-p">від 2 000 ₴</span></div>
-        <div class="srv"><h3>🛞 Ходова</h3><p>Підвіска, амортизатори, рульове управління, розвал-сходження.</p><span class="srv-p">від 500 ₴</span></div>
-        <div class="srv"><h3>🔌 Електрика</h3><p>Діагностика та ремонт електрообладнання, генератор, стартер.</p><span class="srv-p">від 400 ₴</span></div>
-        <div class="srv"><h3>❄️ Кондиціонер</h3><p>Заправка, діагностика витоків, ремонт компресора.</p><span class="srv-p">від 600 ₴</span></div>
-        <div class="srv"><h3>🛢️ ТО</h3><p>Планове обслуговування: заміна масла, фільтрів, свічок, рідин.</p><span class="srv-p">від 800 ₴</span></div>
+<!-- ===== SMART DIAGNOSIS ===== -->
+<section class="section" id="diagnosis">
+    <div class="section__header" data-reveal>
+        <span class="section__tag">Головна фішка</span>
+        <h2 class="section__title">Smart Diagnosis</h2>
+        <p class="section__sub">Оберіть симптом — отримайте відповідь</p>
     </div>
-</section>
-
-<section class="sec sec-alt" id="why">
-    <div class="sec-hd" data-reveal><span class="tag">Переваги</span><h2>Чому обирають нас</h2></div>
-    <div class="why-grid" data-reveal>
-        <div class="why"><strong>8+</strong><span>років досвіду</span></div>
-        <div class="why"><strong>5000+</strong><span>відремонтованих авто</span></div>
-        <div class="why"><strong>12 міс</strong><span>гарантія на роботу</span></div>
-        <div class="why"><strong>30 хв</strong><span>безкоштовна діагностика</span></div>
-    </div>
-</section>
-
-<section class="sec" id="pricing">
-    <div class="sec-hd" data-reveal><span class="tag">Ціни</span><h2>Прозоре ціноутворення</h2><p class="sec-sub">Кошторис до початку робіт. Без сюрпризів.</p></div>
-    <div class="price-table" data-reveal>
-        <div class="pt-row pt-hd"><span>Послуга</span><span>Ціна від</span></div>
-        <div class="pt-row"><span>Комп'ютерна діагностика</span><span>300 ₴</span></div>
-        <div class="pt-row"><span>Заміна масла + фільтр</span><span>800 ₴</span></div>
-        <div class="pt-row"><span>Заміна гальмівних колодок</span><span>600 ₴</span></div>
-        <div class="pt-row"><span>Ремонт підвіски (1 вісь)</span><span>1 500 ₴</span></div>
-        <div class="pt-row"><span>Розвал-сходження</span><span>500 ₴</span></div>
-        <div class="pt-row"><span>Заправка кондиціонера</span><span>600 ₴</span></div>
-        <div class="pt-row"><span>Ремонт двигуна</span><span>від 2 000 ₴</span></div>
-    </div>
-</section>
-
-<section class="sec sec-dark" id="book">
-    <div class="sec-hd" data-reveal><span class="tag tag--l">Запис</span><h2 class="t-l">Записатися на сервіс</h2></div>
-    <div class="book-grid" data-reveal>
-        <form class="b-form" id="b-form">
-            <input type="text" placeholder="Ваше ім'я" required>
-            <input type="tel" placeholder="+380 __ ___ __ __" required>
-            <input type="text" placeholder="Марка та модель авто">
-            <select><option disabled selected>Тип послуги</option><option>Діагностика</option><option>Двигун</option><option>Ходова</option><option>Електрика</option><option>Кондиціонер</option><option>ТО</option></select>
-            <button type="submit" class="btn btn-main btn-full">Записатися</button>
-        </form>
-        <div class="b-info">
-            <div class="bi"><span class="bl">Адреса</span><span>вул. Немирівське шосе, 45</span></div>
-            <div class="bi"><span class="bl">Телефон</span><a href="tel:+380441234567">+38 (044) 123-45-67</a></div>
-            <div class="bi"><span class="bl">Графік</span><span>Пн–Сб: 8:00 – 19:00</span></div>
+    <div class="diagnosis" data-reveal>
+        <div class="diag__symptoms" id="diag-symptoms">
+            <button class="diag__sym" data-sym="0">
+                <span class="diag__sym-icon">🔊</span>
+                <span class="diag__sym-name">Дивний звук</span>
+            </button>
+            <button class="diag__sym" data-sym="1">
+                <span class="diag__sym-icon">📳</span>
+                <span class="diag__sym-name">Вібрація</span>
+            </button>
+            <button class="diag__sym" data-sym="2">
+                <span class="diag__sym-icon">🚫</span>
+                <span class="diag__sym-name">Не заводиться</span>
+            </button>
+            <button class="diag__sym" data-sym="3">
+                <span class="diag__sym-icon">⚠️</span>
+                <span class="diag__sym-name">Check Engine</span>
+            </button>
+            <button class="diag__sym" data-sym="4">
+                <span class="diag__sym-icon">🌡️</span>
+                <span class="diag__sym-name">Перегрів</span>
+            </button>
+            <button class="diag__sym" data-sym="5">
+                <span class="diag__sym-icon">💧</span>
+                <span class="diag__sym-name">Витік рідини</span>
+            </button>
+        </div>
+        <div class="diag__result" id="diag-result" style="display:none">
+            <div class="diag__result-header">
+                <span class="diag__result-tag">Результат діагностики</span>
+                <h3 id="diag-title"></h3>
+            </div>
+            <div class="diag__result-body">
+                <div class="diag__metric">
+                    <span class="diag__metric-label">Ймовірна причина</span>
+                    <span class="diag__metric-value" id="diag-cause"></span>
+                </div>
+                <div class="diag__metric">
+                    <span class="diag__metric-label">Складність</span>
+                    <div class="diag__difficulty" id="diag-diff"></div>
+                </div>
+                <div class="diag__metric">
+                    <span class="diag__metric-label">Орієнтовний бюджет</span>
+                    <span class="diag__metric-value diag__metric-value--accent" id="diag-cost"></span>
+                </div>
+                <div class="diag__metric">
+                    <span class="diag__metric-label">Рекомендація</span>
+                    <span class="diag__metric-value" id="diag-action"></span>
+                </div>
+            </div>
+            <a href="#booking" class="btn btn--accent btn--full">Записатися на діагностику</a>
+            <button class="diag__reset" id="diag-reset">← Обрати інший симптом</button>
         </div>
     </div>
 </section>
 
-<footer class="ftr"><div class="ftr-in"><a href="#" class="logo">Auto<span>Fix</span> Pro</a><p>© 2026 AutoFix Pro. Демо.</p><p class="fc"><a href="https://t.me/MarkoStepaniuk">MarkLabs Agency</a></p></div></footer>
+<!-- ===== COST ESTIMATOR ===== -->
+<section class="section section--dark" id="estimator">
+    <div class="section__header" data-reveal>
+        <span class="section__tag section__tag--accent">Калькулятор</span>
+        <h2 class="section__title">Repair Cost Estimator</h2>
+        <p class="section__sub">Дізнайся вартість до візиту</p>
+    </div>
+    <div class="estimator" data-reveal>
+        <div class="est__controls">
+            <div class="est-group">
+                <label class="est-label">Марка</label>
+                <select class="est-select" id="est-brand">
+                    <option value="" disabled selected>Оберіть марку</option>
+                    <option>BMW</option><option>Mercedes</option><option>Audi</option>
+                    <option>Toyota</option><option>Volkswagen</option><option>Honda</option>
+                    <option>Hyundai</option><option>Kia</option><option>Інше</option>
+                </select>
+            </div>
+            <div class="est-group">
+                <label class="est-label">Проблема</label>
+                <select class="est-select" id="est-problem">
+                    <option value="" disabled selected>Оберіть проблему</option>
+                    <option value="brakes">Гальма</option>
+                    <option value="engine">Двигун</option>
+                    <option value="suspension">Підвіска</option>
+                    <option value="electrics">Електрика</option>
+                    <option value="transmission">Коробка передач</option>
+                    <option value="ac">Кондиціонер</option>
+                </select>
+            </div>
+            <button class="btn btn--accent btn--full" id="est-calc">Розрахувати</button>
+        </div>
+        <div class="est__result" id="est-result" style="display:none">
+            <div class="est__result-card">
+                <span class="est__result-tag">Орієнтовна вартість</span>
+                <div class="est__result-range">
+                    <span id="est-min">0</span> — <span id="est-max">0</span> ₴
+                </div>
+                <div class="est__result-meta">
+                    <div><span class="est__meta-label">Термін</span><span id="est-time">1–2 дні</span></div>
+                    <div><span class="est__meta-label">Гарантія</span><span>12 місяців</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== REPAIR JOURNEY ===== -->
+<section class="section" id="process">
+    <div class="section__header" data-reveal>
+        <span class="section__tag">Процес</span>
+        <h2 class="section__title">Repair Journey</h2>
+        <p class="section__sub">Прозорість на кожному етапі</p>
+    </div>
+    <div class="rjourney" data-reveal>
+        <div class="rj__step">
+            <div class="rj__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="rj__num">01</span>
+            <h3>Діагностика</h3>
+            <p>Комп'ютерна + візуальна. Точна причина за 30–60 хвилин.</p>
+        </div>
+        <div class="rj__step">
+            <div class="rj__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke="currentColor" stroke-width="1.5"/><path d="M9 14l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="rj__num">02</span>
+            <h3>Узгодження</h3>
+            <p>Фото, опис, вартість — погоджуєте в месенджері. Без сюрпризів.</p>
+        </div>
+        <div class="rj__step">
+            <div class="rj__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91A6 6 0 0114.7 6.3z" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <span class="rj__num">03</span>
+            <h3>Ремонт</h3>
+            <p>Оригінальні запчастини, сертифіковані майстри, фото-звіт.</p>
+        </div>
+        <div class="rj__step">
+            <div class="rj__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="rj__num">04</span>
+            <h3>Перевірка</h3>
+            <p>Тест-драйв, контрольна діагностика, перевірка якості.</p>
+        </div>
+        <div class="rj__step">
+            <div class="rj__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="rj__num">05</span>
+            <h3>Видача</h3>
+            <p>Чисте авто, гарантійний талон, рекомендації по ТО.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SUCCESS STORIES ===== -->
+<section class="section section--dark" id="cases">
+    <div class="section__header" data-reveal>
+        <span class="section__tag section__tag--accent">Кейси</span>
+        <h2 class="section__title">Problem → Solved</h2>
+    </div>
+    <div class="cases" data-reveal>
+        <article class="case-card">
+            <div class="case-card__badge">BMW X5</div>
+            <div class="case-card__problem">
+                <span class="case-card__label">Проблема</span>
+                <p>Вібрація на швидкості 80+ км/год, биття керма</p>
+            </div>
+            <div class="case-card__solution">
+                <span class="case-card__label case-card__label--green">Рішення</span>
+                <p>Заміна ступичних підшипників + балансування</p>
+            </div>
+            <div class="case-card__meta">
+                <span>⏱ 1 день</span>
+                <span>💰 8 500 ₴</span>
+                <span>✓ Гарантія 12 міс</span>
+            </div>
+        </article>
+        <article class="case-card">
+            <div class="case-card__badge">Mercedes C-Class</div>
+            <div class="case-card__problem">
+                <span class="case-card__label">Проблема</span>
+                <p>Check Engine, втрата потужності, підвищена витрата</p>
+            </div>
+            <div class="case-card__solution">
+                <span class="case-card__label case-card__label--green">Рішення</span>
+                <p>Заміна каталізатора + прошивка блоку керування</p>
+            </div>
+            <div class="case-card__meta">
+                <span>⏱ 2 дні</span>
+                <span>💰 22 000 ₴</span>
+                <span>✓ Гарантія 24 міс</span>
+            </div>
+        </article>
+        <article class="case-card">
+            <div class="case-card__badge">Toyota Camry</div>
+            <div class="case-card__problem">
+                <span class="case-card__label">Проблема</span>
+                <p>Не заводиться вранці, стартер крутить повільно</p>
+            </div>
+            <div class="case-card__solution">
+                <span class="case-card__label case-card__label--green">Рішення</span>
+                <p>Заміна АКБ + діагностика генератора (OK)</p>
+            </div>
+            <div class="case-card__meta">
+                <span>⏱ 2 години</span>
+                <span>💰 4 200 ₴</span>
+                <span>✓ Гарантія 24 міс</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats-section">
+    <div class="stats" data-reveal>
+        <div class="stat">
+            <span class="stat__value" data-count="15000">0</span><span class="stat__suffix">+</span>
+            <span class="stat__label">ремонтів виконано</span>
+        </div>
+        <div class="stat">
+            <span class="stat__value" data-count="49">0</span><span class="stat__suffix">/5</span>
+            <span class="stat__label">рейтинг Google</span>
+        </div>
+        <div class="stat">
+            <span class="stat__value" data-count="97">0</span><span class="stat__suffix">%</span>
+            <span class="stat__label">повертаються</span>
+        </div>
+        <div class="stat">
+            <span class="stat__value" data-count="12">0</span><span class="stat__suffix"> років</span>
+            <span class="stat__label">досвіду</span>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TRUST ===== -->
+<section class="section" id="trust">
+    <div class="section__header" data-reveal>
+        <span class="section__tag">Довіра</span>
+        <h2 class="section__title">Чому нам довіряють</h2>
+    </div>
+    <div class="trust" data-reveal>
+        <div class="trust__card">
+            <div class="trust__icon">🛡️</div>
+            <h3>Гарантія 12–24 міс</h3>
+            <p>На всі роботи та запчастини. Письмовий гарантійний талон.</p>
+        </div>
+        <div class="trust__card">
+            <div class="trust__icon">🏆</div>
+            <h3>Bosch Service</h3>
+            <p>Сертифікована станція. Обладнання та стандарти від Bosch.</p>
+        </div>
+        <div class="trust__card">
+            <div class="trust__icon">📷</div>
+            <h3>Фото-звіт</h3>
+            <p>Фото кожного етапу ремонту. Ви бачите, що відбувається.</p>
+        </div>
+        <div class="trust__card">
+            <div class="trust__icon">💬</div>
+            <h3>Прозорі ціни</h3>
+            <p>Ніяких прихованих доплат. Ціна узгоджується ДО початку робіт.</p>
+        </div>
+        <div class="trust__card">
+            <div class="trust__icon">🔧</div>
+            <h3>Оригінальні запчастини</h3>
+            <p>Тільки OEM або перевірені аналоги. Жодного Китаю без відома клієнта.</p>
+        </div>
+        <div class="trust__card">
+            <div class="trust__icon">⚡</div>
+            <h3>Швидкість</h3>
+            <p>80% ремонтів — за 1 день. Складні випадки — до 3 днів.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== BOOKING ===== -->
+<section class="section section--dark" id="booking">
+    <div class="section__header" data-reveal>
+        <span class="section__tag section__tag--accent">Запис</span>
+        <h2 class="section__title">Що сталося<br>з вашим авто?</h2>
+        <p class="section__sub">Опишіть проблему — ми підготуємось до вашого візиту</p>
+    </div>
+    <div class="booking" data-reveal>
+        <form class="booking__form" id="book-form" novalidate>
+            <div class="book-row">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder=" " required id="bf-name" autocomplete="name">
+                    <label for="bf-name">Ваше ім'я</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder=" " required id="bf-phone" autocomplete="tel">
+                    <label for="bf-phone">Телефон</label>
+                </div>
+            </div>
+            <div class="book-row">
+                <div class="form-group">
+                    <input type="text" name="car" placeholder=" " id="bf-car">
+                    <label for="bf-car">Марка та модель авто</label>
+                </div>
+                <div class="form-group">
+                    <select name="urgency" id="bf-urgency">
+                        <option value="" disabled selected></option>
+                        <option>Терміново (сьогодні)</option>
+                        <option>Цього тижня</option>
+                        <option>Коли буде місце</option>
+                    </select>
+                    <label for="bf-urgency">Терміновість</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea name="problem" placeholder=" " rows="3" required id="bf-problem"></textarea>
+                <label for="bf-problem">Опишіть проблему</label>
+            </div>
+            <button type="submit" class="btn btn--accent btn--full" id="bf-btn">
+                <span class="btn__text">Записатися</span>
+                <span class="btn__loader" style="display:none;">⟳</span>
+            </button>
+            <div class="booking__success" id="bf-success" style="display:none;">
+                <span>✓</span> Заявка прийнята. Зателефонуємо протягом 30 хвилин.
+            </div>
+        </form>
+        <div class="booking__info">
+            <div class="booking__item"><span class="booking__label">Адреса</span><span>м. Київ, вул. Промислова, 22</span></div>
+            <div class="booking__item"><span class="booking__label">Телефон</span><a href="tel:+380441234567">+38 (044) 123-45-67</a></div>
+            <div class="booking__item"><span class="booking__label">Графік</span><span>Пн–Сб: 8:00 – 20:00</span></div>
+            <div class="booking__item"><span class="booking__label">Евакуатор</span><a href="tel:+380671234567">Безкоштовно 24/7</a></div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer__inner">
+        <a href="#" class="footer__logo">AUTO<span>FIX</span> PRO</a>
+        <p class="footer__copy">© 2026 AutoFix Pro. Problem Solved.</p>
+        <p class="footer__credit">Розробка: <a href="https://t.me/MarkoStepaniuk" target="_blank">MarkLabs Agency</a></p>
+    </div>
+</footer>
 
 <script>
-document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
-window.addEventListener('scroll',function(){document.getElementById('hdr').classList.toggle('scrolled',scrollY>50);});
-var burger=document.getElementById('burger'),mob=document.getElementById('mob');
-burger.onclick=function(){burger.classList.toggle('on');mob.classList.toggle('on');document.body.style.overflow=mob.classList.contains('on')?'hidden':'';};
-function closeM(){burger.classList.remove('on');mob.classList.remove('on');document.body.style.overflow='';}
-var obs=new IntersectionObserver(function(e){e.forEach(function(el){if(el.isIntersecting)el.target.classList.add('vis');});},{threshold:0.1});
-document.querySelectorAll('[data-reveal]').forEach(function(el){obs.observe(el);});
-document.getElementById('b-form').onsubmit=function(e){e.preventDefault();this.querySelector('button').textContent='✓ Записано!';this.querySelector('button').disabled=true;};
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});});
+// Header
+window.addEventListener('scroll',function(){document.getElementById('header').classList.toggle('header--scrolled',scrollY>80);});
+// Mobile
+var burger=document.getElementById('burger'),mob=document.getElementById('mobile-menu');
+burger.onclick=function(){burger.classList.toggle('active');mob.classList.toggle('active');document.body.style.overflow=mob.classList.contains('active')?'hidden':'';};
+function closeMenu(){burger.classList.remove('active');mob.classList.remove('active');document.body.style.overflow='';}
+// Reveal
+var revealObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('revealed');});},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('[data-reveal]').forEach(function(el){revealObs.observe(el);});
+
+// Smart Diagnosis
+var diagData=[
+    {title:'Дивний звук при русі',cause:'Зношені підшипники маточини або деталі підвіски (стойки, сайлентблоки)',diff:2,cost:'3 000 – 12 000 ₴',action:'Рекомендуємо діагностику ходової. Їздити можна, але не затягуйте.'},
+    {title:'Вібрація кузова або керма',cause:'Дисбаланс коліс, деформація дисків або зношені ШРУСи',diff:2,cost:'2 000 – 8 000 ₴',action:'Перевірте балансування. Якщо не допоможе — на підйомник.'},
+    {title:'Двигун не заводиться',cause:'Акумулятор, стартер або паливна система. 60% випадків — АКБ.',diff:1,cost:'1 500 – 15 000 ₴',action:'Якщо стартер крутить повільно — замініть АКБ. Інакше — евакуатор до нас.'},
+    {title:'Горить Check Engine',cause:'Каталізатор, лямбда-зонд, свічки або датчик MAF. Потрібна комп\'ютерна діагностика.',diff:3,cost:'2 000 – 25 000 ₴',action:'Не ігноруйте. Запишіться на комп\'ютерну діагностику (500 ₴).'},
+    {title:'Перегрів двигуна',cause:'Термостат, помпа, радіатор або прокладка ГБЦ',diff:4,cost:'3 000 – 35 000 ₴',action:'СТОП! Не їдьте далі. Викличте евакуатор. Перегрів = ризик капітального ремонту.'},
+    {title:'Витік рідини під авто',cause:'Масло (двигун/КПП), антифриз (радіатор/патрубки) або гальмівна рідина',diff:2,cost:'1 500 – 10 000 ₴',action:'Визначте колір: зелений/рожевий = антифриз, чорний = масло, прозорий = гальма (терміново!).'}
+];
+document.querySelectorAll('.diag__sym').forEach(function(btn){
+    btn.addEventListener('click',function(){
+        var d=diagData[this.getAttribute('data-sym')];
+        document.getElementById('diag-title').textContent=d.title;
+        document.getElementById('diag-cause').textContent=d.cause;
+        document.getElementById('diag-cost').textContent=d.cost;
+        document.getElementById('diag-action').textContent=d.action;
+        var diffEl=document.getElementById('diag-diff');
+        diffEl.innerHTML='';
+        for(var i=0;i<5;i++){
+            var dot=document.createElement('span');
+            dot.className='diag__diff-dot'+(i<d.diff?' diag__diff-dot--active':'');
+            diffEl.appendChild(dot);
+        }
+        document.getElementById('diag-result').style.display='block';
+        document.querySelector('.diag__symptoms').style.display='none';
+    });
+});
+document.getElementById('diag-reset').onclick=function(){
+    document.getElementById('diag-result').style.display='none';
+    document.querySelector('.diag__symptoms').style.display='grid';
+};
+
+// Cost Estimator
+var costs={brakes:{min:2000,max:12000,time:'1 день'},engine:{min:5000,max:45000,time:'2–5 днів'},suspension:{min:3000,max:18000,time:'1–2 дні'},electrics:{min:1500,max:8000,time:'1 день'},transmission:{min:8000,max:55000,time:'3–7 днів'},ac:{min:2000,max:15000,time:'1–2 дні'}};
+document.getElementById('est-calc').onclick=function(){
+    var brand=document.getElementById('est-brand').value;
+    var problem=document.getElementById('est-problem').value;
+    if(!brand||!problem)return;
+    var c=costs[problem];
+    var mult=(['BMW','Mercedes','Audi'].indexOf(brand)>=0)?1.4:1;
+    document.getElementById('est-min').textContent=Math.round(c.min*mult).toLocaleString('uk-UA');
+    document.getElementById('est-max').textContent=Math.round(c.max*mult).toLocaleString('uk-UA');
+    document.getElementById('est-time').textContent=c.time;
+    document.getElementById('est-result').style.display='block';
+};
+
+// Counters
+var counterAnimated=new Set();
+function animateCounter(el){if(counterAnimated.has(el))return;counterAnimated.add(el);var target=parseInt(el.getAttribute('data-count'));var duration=2000;var start=performance.now();function tick(now){var progress=Math.min((now-start)/duration,1);var eased=1-Math.pow(1-progress,4);var val=Math.floor(eased*target);el.textContent=target>=1000?val.toLocaleString('uk-UA'):val;if(progress<1)requestAnimationFrame(tick);else el.textContent=target>=1000?target.toLocaleString('uk-UA'):target;}requestAnimationFrame(tick);}
+var counterObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)animateCounter(e.target);});},{threshold:0.3});
+document.querySelectorAll('[data-count]').forEach(function(el){counterObs.observe(el);});
+
+// Form
+document.getElementById('book-form').addEventListener('submit',function(e){
+    e.preventDefault();var form=this,valid=true;
+    form.querySelectorAll('[required]').forEach(function(input){var group=input.closest('.form-group');if(!input.value.trim()){group.classList.add('error');valid=false;}else{group.classList.remove('error');}});
+    if(!valid)return;
+    var btn=document.getElementById('bf-btn');btn.querySelector('.btn__text').style.display='none';btn.querySelector('.btn__loader').style.display='inline';btn.disabled=true;
+    setTimeout(function(){form.style.display='none';document.getElementById('bf-success').style.display='flex';},1500);
+});
+document.querySelectorAll('.form-group input,.form-group select,.form-group textarea').forEach(function(el){el.addEventListener('input',function(){this.closest('.form-group').classList.remove('error');});});
+
+// Parallax
+window.addEventListener('scroll',function(){var img=document.querySelector('.hero__bg-img');if(img&&scrollY<window.innerHeight)img.style.transform='translateY('+scrollY*0.2+'px) scale(1.08)';});
 </script>
 </body>
 </html>
