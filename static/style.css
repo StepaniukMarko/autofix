@@ -266,3 +266,19 @@ p{color:var(--text-muted);font-size:.92rem;line-height:1.7}
 }
 
 .form-group .label--up{top:.5rem;transform:none;font-size:.6rem;color:var(--accent);letter-spacing:.05em;text-transform:uppercase}
+
+
+/* === AutoFix — services + guarantees === */
+.af-services{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:1000px;margin:0 auto}
+.af-srv{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;border:1px solid var(--border);border-radius:var(--radius-sm);transition:border-color .3s}
+.af-srv:hover{border-color:var(--accent)}
+.af-srv__name{font-size:.88rem;color:var(--text);font-weight:500}
+.af-srv__price{font-size:.88rem;font-weight:800;color:var(--accent);white-space:nowrap}
+.af-guarantees{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.af-guarantee{padding:2rem 1.5rem;border:1px solid var(--border);border-radius:var(--radius);text-align:center;transition:all .35s var(--ease)}
+.af-guarantee:hover{border-color:rgba(59,130,246,.3);background:var(--accent-glow);transform:translateY(-4px)}
+.af-guarantee svg{color:var(--accent);margin-bottom:1rem}
+.af-guarantee h3{font-size:1rem;margin-bottom:.4rem}
+.af-guarantee p{font-size:.82rem;color:var(--text-muted);line-height:1.6}
+@media(max-width:1024px){.af-services{grid-template-columns:repeat(2,1fr)}.af-guarantees{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.af-services{grid-template-columns:1fr}.af-guarantees{grid-template-columns:1fr}}
