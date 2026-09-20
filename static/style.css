@@ -282,3 +282,98 @@ p{color:var(--text-muted);font-size:.92rem;line-height:1.7}
 .af-guarantee p{font-size:.82rem;color:var(--text-muted);line-height:1.6}
 @media(max-width:1024px){.af-services{grid-template-columns:repeat(2,1fr)}.af-guarantees{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.af-services{grid-template-columns:1fr}.af-guarantees{grid-template-columns:1fr}}
+
+/* ===== MOBILE PREMIUM v2 ===== */
+@media(max-width:768px){
+    /* Hero */
+    .hero__title{font-size:2.7rem !important;line-height:1.08 !important;font-weight:900 !important;letter-spacing:-1px}
+    .hero__title .hero__accent{display:block}
+    .hero__desc{font-size:1rem;line-height:1.65;margin-bottom:1.75rem}
+    .hero__badge{font-size:.78rem}
+    .btn--accent.btn--lg{width:100%;min-height:52px;font-size:1rem !important;padding:1rem 1.5rem !important;display:flex;align-items:center;justify-content:center;border-radius:12px;box-shadow:0 8px 28px rgba(59,130,246,.3)}
+
+    /* Disable parallax */
+    .hero__bg-img{transform:none !important;will-change:auto}
+
+    /* Diagnosis */
+    .diagnosis{flex-direction:column !important;gap:1.5rem}
+    .diag__symptoms{display:grid !important;grid-template-columns:repeat(2,1fr) !important;gap:.85rem}
+    .diag__sym{padding:1rem .75rem;border-radius:12px}
+    .diag__sym-icon svg{width:26px;height:26px}
+    .diag__sym-name{font-size:.82rem;font-weight:600}
+    /* Animated result reveal */
+    .diag__result{border-radius:14px}
+    #diag-result .btn--accent{min-height:48px;font-size:.95rem}
+
+    /* Cost estimator */
+    .estimator{flex-direction:column !important;gap:1.5rem}
+    .est__controls{padding:1.5rem}
+    .est-select{font-size:.95rem;min-height:44px}
+    #est-calc{min-height:48px;font-size:.95rem}
+    .est__result-range{font-size:2rem !important;font-weight:800 !important}
+
+    /* Journey */
+    .rjourney{grid-template-columns:repeat(2,1fr) !important;gap:1rem}
+    .rj__step{padding:1.1rem;border-radius:12px}
+    .rj__num{font-size:1.5rem}
+    .rj__step h3{font-size:.95rem;font-weight:700}
+
+    /* Cases */
+    .cases{grid-template-columns:1fr !important;gap:1.25rem}
+    .case-card{padding:1.25rem}
+    .case-card__badge{font-size:.72rem}
+
+    /* Services list */
+    .af-services{gap:0}
+    .af-srv{padding:.9rem 1rem;font-size:.9rem}
+    .af-srv__price{font-weight:700}
+
+    /* Guarantees */
+    .af-guarantees{grid-template-columns:1fr 1fr !important;gap:1rem}
+    .af-guarantee{padding:1.25rem;border-radius:12px}
+    .af-guarantee h3{font-size:.95rem;font-weight:700}
+    .af-guarantee p{font-size:.8rem}
+
+    /* Masters */
+    .af-masters{flex-direction:column !important;gap:1.25rem}
+    .af-master{flex-direction:row !important;gap:1rem;align-items:flex-start}
+    .af-master__photo{width:72px;height:72px;flex-shrink:0;border-radius:50%;overflow:hidden}
+    .af-master__photo img{width:100%;height:100%;object-fit:cover}
+
+    /* Trust cards */
+    .trust{grid-template-columns:1fr 1fr !important;gap:1rem}
+    .trust__card{padding:1.25rem;border-radius:12px}
+    .trust__icon{font-size:1.5rem;margin-bottom:.5rem}
+    .trust__card h3{font-size:.92rem;font-weight:700}
+    .trust__card p{font-size:.8rem}
+
+    /* Booking */
+    .booking{flex-direction:column !important;gap:2rem}
+    .book-row{flex-direction:column !important;gap:.75rem}
+    #bf-btn{min-height:52px;font-size:1rem}
+
+    /* Stats */
+    .stats{grid-template-columns:repeat(2,1fr) !important;gap:1.25rem}
+    .stat__value{font-size:2.5rem !important;font-weight:900 !important}
+
+    /* Section headers */
+    .section__title{font-size:1.9rem !important;font-weight:900 !important;letter-spacing:-.5px}
+    .section__title br{display:none}
+}
+@media(max-width:390px){
+    .hero__title{font-size:2.2rem !important}
+    .section__title{font-size:1.65rem !important}
+    .diag__symptoms{grid-template-columns:1fr 1fr !important}
+    .af-guarantees{grid-template-columns:1fr !important}
+    .trust{grid-template-columns:1fr 1fr !important}
+}
+
+/* Diagnosis result animated reveal */
+.diag__result[style*="display: block"]{
+    animation:diag-reveal .4s cubic-bezier(.16,1,.3,1) both;
+}
+@keyframes diag-reveal{
+    from{opacity:0;transform:translateY(12px)}
+    to{opacity:1;transform:translateY(0)}
+}
+/* ===== END MOBILE PREMIUM v2 ===== */
