@@ -377,3 +377,28 @@ p{color:var(--text-muted);font-size:.92rem;line-height:1.7}
     to{opacity:1;transform:translateY(0)}
 }
 /* ===== END MOBILE PREMIUM v2 ===== */
+
+
+/* ===== MOBILE SAFETY LAYER (320–414px) ===== */
+@media(max-width:414px){
+    html, body { overflow-x: hidden; max-width: 100vw; }
+    * { min-width: 0; }
+    img, video, iframe { max-width: 100%; height: auto; }
+    [class*="slider"], [class*="gallery"] { max-width: 100%; }
+    h1, h2, h3, .hero__title, .section__title { overflow-wrap: break-word; word-break: break-word; }
+    .nav, .section, .hero, .footer { max-width: 100vw; }
+}
+@media(max-width:360px){
+    .hero__title { font-size: 2rem !important; }
+    .section__title { font-size: 1.5rem !important; }
+    .section, .hero { padding-left: 1rem; padding-right: 1rem; }
+    .btn { font-size: 0.8rem; padding: 0.9rem 1.3rem; }
+    .stats { grid-template-columns: repeat(2,1fr) !important; }
+    .diag__symptoms, .rjourney { grid-template-columns: repeat(2,1fr) !important; }
+}
+@media(max-width:320px){
+    .hero__title { font-size: 1.7rem !important; }
+    .stats, .trust, .cases, .af-masters, .af-services, .af-guarantees { grid-template-columns: 1fr !important; }
+    .diag__symptoms, .rjourney { grid-template-columns: 1fr !important; }
+}
+/* ===== END MOBILE SAFETY LAYER ===== */
